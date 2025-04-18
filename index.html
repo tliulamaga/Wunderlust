@@ -7,6 +7,7 @@
     <title>Wunderlust</title>
 </head>
 <header>
+    <a class="skip-to-content-link" href="#main">Skip to Content</a>
     <h1>Wunderlust Travel</h1>
     <picture>
         <source media="(min-width:1024px)" srcset="images-20250418T150346Z-001/images/logo-L.png">
@@ -19,15 +20,15 @@
 
 <nav>
     <ul>
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">Inspirations</a></li>
-        <li><a href="#">Special</a></li>
-        <li><a href="#">Contact US</a></li>
+        <li><a href="#Destination">Destinations</a></li>
+        <li><a href="#Inspiration">Inspirations</a></li>
+        <li><a href="#Special">Special</a></li>
+        <li><a href="#contactUs">Contact Us</a></li>
     </ul>
 </nav>
-<main>
+<main id="main">
 <section>
-<h2>Majorca</h2>
+<h2 id="Destination">Majorca</h2>
 <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
 <picture>
     <source media="(min-width:1024px)" srcset="images-20250418T150346Z-001/images/majorca-waves-L.png">
@@ -86,7 +87,7 @@
 </section>
 
 <section>
-<h2>Testimonials</h2>
+<h2 id="Inspiration">Testimonials</h2>
 <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <h3>Miranda Blake</h3>
 <figure>
@@ -139,7 +140,7 @@
 </section>
 
 <section>
-<h2>About Your Destination</h2>
+<h2 id="Special">About Your Destination</h2>
 <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
 <h3>Size</h3>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ruler-2" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -182,8 +183,8 @@
 </section>
 
 <section>
-<h2>Contact Us</h2>
-<form>
+<h2 id="contactUs">Contact Us</h2>
+<form action="/action_page.php">
     <label for="firstName">First Name</label>
     <input id="firstName" type="text" required>
     <label for="lastName">Last Name</label>
@@ -197,9 +198,9 @@
             <input id="phoneradio" type="radio" name="Prefered Contact Method" 	value="phone" required>
             <label for="phoneradio">Phone</label>
         </fieldset>
-        <label>Destination</label>
-		<select required>
-			<option value="Barcelona">Barcelona</option>
+        <label for="destination">Destination</label>
+		<select name="destination" id="destination" required>
+			<option value="">Barcelona</option>
 			<option value="Granada">Granada</option>
 			<option value="Ibiza">Ibiza</option>
 			<option value="Madrid">Madrid</option>
@@ -208,14 +209,15 @@
             <option value="Tenerife">Temerife</option>
 			<option value="Valenica">Valenica</option>
 		</select>
-        <label>Travel Time</label>
-		<select required>
-			<option value="Fall">Fall</option>
+        <label for="travelTime">Travel Time</label>
+		<select name="travelTime" id="travelTime" required>
+			<option value="">Fall</option>
 			<option value="Winter">Winter</option>
 			<option value="Spring">Spring</option>
 			<option value="Summer">Summer</option>
 			<option value="Flexibile*">Flexibile*</option>
         </select>
+        <input type="submit" value="Submit">
 </form>
 </section>
 </main>
